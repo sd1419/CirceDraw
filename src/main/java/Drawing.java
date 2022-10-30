@@ -1,5 +1,9 @@
 
 
+import shapes.Circle;
+import shapes.Rect;
+import shapes.Square;
+
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -18,7 +22,7 @@ public class Drawing extends Canvas {
         Color color=new Color(0x992266);//
 
         c = new Circle(initPoint,color,50);
-        r = new Rect(100, 100);
+        r = new Rect(200, 100);
         s = new Square(10);
         f = new Frame("My window"); 	// Instantiates the Frame
         f.add(this);			// Adds the Canvas (ie this object) to the Frame
