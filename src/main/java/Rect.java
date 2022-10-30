@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class Rect {
+public class Rect extends Shape{
 
 
 /**
@@ -8,22 +8,21 @@ public class Rect {
  * an AWT Graphics object using AWT library methods
  * */
 
-    private int x;	// Fields
-    private int y;	// AWT class Point
+
     private int width;// AWT class Color
     private int height;
-    private Color col;
 
-    public Rect(int initx,  int inity,  int initwidth,int initheight, Color initcol){ // The constructor
-        x = initx;	// Initialize the fields of the object
-        y= inity;
+
+
+    public Rect( int initwidth,int initheight){ // The constructor
+        super(new Point(10,10), Color.blue);
+
         width = initwidth;
         height = initheight;
-        col = initcol;
     }
 
     public void draw(Graphics g) {	// A method that draws the rectangle in g
-        g.setColor(col);
-        g.fillRect(x, y,width,height);
+        g.setColor(super.col);
+        g.fillRect(super.pos.x, super.pos.y,width,height);
     }
 }
