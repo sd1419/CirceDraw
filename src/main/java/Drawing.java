@@ -9,13 +9,14 @@ public class Drawing extends Canvas {
     private Frame f;
 
     private Circle c;
-
+    private Rect r;
     // The constructor
     public Drawing(){
         Point initPoint=new Point(200,200);
         Color color=new Color(0x992266);//
 
         c = new Circle(initPoint,color,50);
+        r = new Rect(10, 10 ,100, 100, color);
         f = new Frame("My window"); 	// Instantiates the Frame
         f.add(this);			// Adds the Canvas (ie this object) to the Frame
         f.setLayout(null);		// Stops the frame from trying to layout contents
@@ -32,6 +33,7 @@ public class Drawing extends Canvas {
 
     public void paint(Graphics g){
         c.draw(g);
+        r.draw(g);
     }
 
 }
